@@ -7,7 +7,8 @@ Let's Go Out and Play!!!(Minniefish)
 資料介紹與來源:
 ---------------
 
-十種類型的觀光景點在各個月份的遊客人數資料 主要欄位包括 類型 Class、觀光遊憩區 Scenic Spots、縣市別 Location、各個月份的遊客人數以及合計 Total（年總遊客人數）
+-   十種類型的觀光景點在各個月份的遊客人數資料
+-   主要欄位包括 類型 Class、觀光遊憩區 Scenic Spots、縣市別 Location、各個月份的遊客人數以及合計 Total（年總遊客人數）
 
 1.  中華民國交通部觀光局 - 2015年國內主要觀光遊憩據點遊客人數月別統計
 2.  中華民國交通部觀光局 - 2016年國內主要觀光遊憩據點遊客人數月別統計
@@ -40,9 +41,10 @@ execl(xls)檔
 組員名單與分工:
 ---------------
 
-B0344128 劉旻妮 B0344133 陳宛俞
+-   B0344128 劉旻妮
+-   B0344133 陳宛俞
 
-分工： 劉旻妮：資料處理與清洗、圖表製作、書面報告製作、ppt製作 陳宛俞：找資料（包括資料來源等等）、資料處理（excel）、圖表製作、ggmap製作
+分工： \* 劉旻妮：資料處理與清洗、圖表製作、書面報告製作、ppt製作 \* 陳宛俞：找資料（包括資料來源等等）、資料處理（excel）、圖表製作、ggmap製作
 
 資料載入
 --------
@@ -157,7 +159,10 @@ b <- ggplot(test2016.t, aes(Class, TotalSum)) +
 b + theme(axis.text.x = element_text(size = 6))
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-3-2.png) \#\#1-12月份的資料分別做子集處理
+![](README_files/figure-markdown_github/unnamed-chunk-3-2.png)
+
+1-12月份的資料分別做子集處理
+----------------------------
 
 ``` r
 library(dplyr)
@@ -434,7 +439,10 @@ ggplot(test2015.all.dec.head, aes(reorder(`Scenic Spots`,value), value)) +
   theme(text = element_text(family = "STHeiti"))
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-5-12.png) \#\#2015年1~12月份的前十大夯點
+![](README_files/figure-markdown_github/unnamed-chunk-5-12.png)
+
+2015年1~12月份的前十大夯點
+--------------------------
 
 ``` r
 library(dplyr)
@@ -657,7 +665,21 @@ ggplot(test2016.all.dec.head, aes(reorder(`Scenic Spots`,value), value)) +
   theme(text = element_text(family = "STHeiti"))
 ```
 
-![](README_files/figure-markdown_github/unnamed-chunk-6-12.png) \#\#2015與2016年1~12月份遊客人數漲勢最高前十名（月份分別） |2015||2016| |:---|:---:| |縣級風景特定區||| |彰化溪州費茲洛公園 Fitzroy Gardens||溪州公園 Sijhou Park| |三芝遊客中心||三芝遊憩區| |秀姑巒溪泛舟||秀姑巒溪遊客中心| |瑞太遊客服務中心||無| |澎湖水族館（關閉）||無|
+![](README_files/figure-markdown_github/unnamed-chunk-6-12.png)
+
+2015與2016年1~12月份遊客人數漲勢最高前十名（月份分別）
+------------------------------------------------------
+
+名稱改變的資料：
+
+|                2015                |             2016             |
+|:----------------------------------:|:----------------------------:|
+|           縣級風景特定區           | 直轄市級及縣（市）風景特定區 |
+| 彰化溪州費茲洛公園 Fitzroy Gardens |     溪州公園 Sijhou Park     |
+|            三芝遊客中心            |          三芝遊憩區          |
+|            秀姑巒溪泛舟            |       秀姑巒溪遊客中心       |
+|          瑞太遊客服務中心          |              無              |
+|         澎湖水族館（關閉）         |              無              |
 
 ``` r
 library(dplyr)
